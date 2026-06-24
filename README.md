@@ -26,12 +26,11 @@ fun to create simple substitution cyphers and experiment with cracking them).
 
 <h3>Overview</h3>
 
-This function, like NumPy's <code>prod</code> function, calculates the product of a sequence
-of integers (typically specified via a list or tuple). Because the NumPy function uses 64-bit
-integer arithmetic with silent handling of overflows, results are wrong if the correct answer
-would exceed the limits of a signed 64-bit integer. When operating on a sequence of integers,
-the <code>prod</code> function defined in this module uses large integer arithmetic and thus
-always gives correct results.
+This function, like NumPy's <code>prod</code> function, calculates the product of a sequence of integers
+(typically specified via a list or tuple). Because numpy.prod uses 64-bit integer arithmetic with silent
+handling of overflows, results are wrong if the correct answer would exceed the limits of a signed 64-bit
+nteger.  When operating on a sequence of integers, the <code>prod</code> function defined in this module
+uses large integer arithmetic and thus always gives correct results.
 
 <h3>Example (Interactive ipython I/O)</h3>
 
@@ -48,7 +47,7 @@ always gives correct results.
    Out[4]: 3628800
 
    In [5]: prod(range(1,31))
-   Out[5]: 265252859812191058636308480000000L
+   Out[5]: 265252859812191058636308480000000
 </pre>
 
 
