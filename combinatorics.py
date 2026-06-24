@@ -298,6 +298,7 @@ set of functions for solving occupancy functions with capacity limits.
 
 
 import collections, copy, itertools, math, operator
+from functools import reduce
 
 try:
    from scipy.special import gammaln
@@ -317,13 +318,12 @@ def prod(seq):
    """
    OVERVIEW
 
-   This function, like NumPy's `prod` function, calculates the product of a
-   sequence of integers (typically specified via a list or tuple).  Because the
-   NumPy function uses 32-bit integer arithmetic with silent handling of
-   overflows, results are wrong if the correct answer would exceed the limits of
-   a signed 32-bit integer.  When operating on a sequence of integers, the
-   `prod` function defined in this module uses large integer arithmetic and thus
-   always gives correct results.
+   This function, like NumPy's `prod` function, calculates the product of a sequence of integers
+   (typically specified via a list or tuple).  Because numpy.prod uses 64-bit integer arithmetic
+   with silent handling of overflows, results are wrong if the correct answer would exceed the
+   limits of a signed 64-bit integer.  When operating on a sequence of integers, the `prod`
+   function defined in this module uses large integer arithmetic and thus always gives correct
+   results.
 
    The following sample input/output compares `numpy.prod` and
    `combinatorics.prod`:
@@ -340,7 +340,7 @@ def prod(seq):
    Out[4]: 3628800
 
    In [5]: prod(range(1,31))
-   Out[5]: 265252859812191058636308480000000L
+   Out[5]: 265252859812191058636308480000000
    """
    if not seq:
       return 1
