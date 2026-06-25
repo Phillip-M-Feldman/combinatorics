@@ -297,7 +297,7 @@ set of functions for solving occupancy functions with capacity limits.
 """
 
 
-import collections, copy, itertools, math, operator
+import collections.abc, copy, itertools, math, operator
 from functools import reduce
 
 try:
@@ -471,7 +471,7 @@ def m_way_ordered_combinations(items, ks):
    """
    if isinstance(items, int):
       items= range(items)
-   elif not isinstance(items,collections.Iterable):
+   elif not isinstance(items,collections.abc.Iterable):
       raise TypeError("`items` must be a list, tuple, or other iterable.")
 
    if not isinstance(ks, (list, tuple)) or len(ks) == 0:
@@ -562,7 +562,7 @@ def m_way_unordered_combinations(items, ks):
    """
    if isinstance(items, int):
       items= range(items)
-   elif not isinstance(items, collections.Iterable):
+   elif not isinstance(items, collections.abc.Iterable):
       raise TypeError("`items` must be a list, tuple, or other iterable.")
 
    if not isinstance(ks, (list, tuple)) or len(ks) == 0:
