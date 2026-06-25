@@ -190,6 +190,17 @@ the following e-mail address: Phillip.M.Feldman@gmail.com
 REVISION HISTORY
 ================
 
+06-24-2026, version 1.4.8, Benjamin L. Cosman:
+
+(minor) I replaced references to `collections` by `collections.abc`.  This change is needed for
+compatibility with Python 3.10+.
+
+
+06-24-2026, version 1.4.7, Phillip M. Feldman:
+
+(minor) I added one line of code to import `reduce` from `functools`.  This change is necessary
+for compatibility with Python 3.X.
+
 
 02-10-2018, version 1.4.6, Phillip M. Feldman:
 
